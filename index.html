@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijoro Boutique - Download App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1414 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .logo-container {
+            margin: 40px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border-radius: 30px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(220, 38, 38, 0.3);
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+            background: linear-gradient(135deg, #dc2626 0%, #f87171 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.2em;
+            color: #d1d5db;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .features {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            text-align: left;
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #dc2626 0%, #f87171 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+            margin: 20px 0;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.6);
+        }
+        
+        .download-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .instructions {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: left;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        
+        .instructions h3 {
+            color: #f87171;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .step {
+            display: flex;
+            margin: 15px 0;
+            align-items: start;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #dc2626 0%, #f87171 100%);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .warning {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #dc2626;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-align: left;
+        }
+        
+        .warning-icon {
+            color: #f87171;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        footer {
+            margin-top: 40px;
+            color: #9ca3af;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .download-btn {
+                padding: 15px 40px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cstyle%3E .line %7B fill:none; stroke:%23FCD34D; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; %7D .circle1 %7B fill:none; stroke:%233B82F6; stroke-width:3; %7D .circle2 %7B fill:none; stroke:%23FCD34D; stroke-width:3; %7D%3C/style%3E%3Ccircle class='circle1' cx='100' cy='100' r='70'/%3E%3Cpath class='circle2' d='M 170 100 A 70 70 0 0 1 160 135' stroke-linecap='round'/%3E%3Cpath class='circle2' d='M 30 100 A 70 70 0 0 0 40 135' stroke-linecap='round'/%3E%3Cpath class='line' d='M 100 50 L 130 80 L 130 120 L 100 150 L 70 120 L 70 80 Z'/%3E%3Ccircle class='line' cx='100' cy='100' r='20'/%3E%3Cline class='line' x1='80' y1='100' x2='60' y2='100'/%3E%3Cline class='line' x1='120' y1='100' x2='140' y2='100'/%3E%3Cline class='line' x1='100' y1='70' x2='100' y2='60'/%3E%3C/svg%3E" alt="Mijoro Boutique Logo">
+            </div>
+        </div>
+        
+        <h1>MIJORO BOUTIQUE</h1>
+        <p class="tagline">Boutique fivarotana produits digitaux sy physiques.<br>Vokatra mora, tsara ary efficace!</p>
+        
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-icon">🛍️</div>
+                <div>
+                    <strong>Produits isan-karazany</strong><br>
+                    <small>Digitaux sy physiques</small>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <div>
+                    <strong>Haingana sy mora</strong><br>
+                    <small>Interface tsara sy efficace</small>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">✨</div>
+                <div>
+                    <strong>Vidim-pidirana tsara</strong><br>
+                    <small>Vokatra kalitao amin'ny vidiny mora</small>
+                </div>
+            </div>
+        </div>
+        
+        <a href="#" class="download-btn" id="downloadBtn">📥 Download App</a>
+        
+        <div class="instructions">
+            <h3>🔧 Fomba fametrahana:</h3>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>Tsindrio ny bokotra <strong>"Download App"</strong> etsy ambony</div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>Andraso kely mandra-pahatapitry ny download</div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>Manokatra ny fichier APK nalaina (ao amin'ny Downloads na Notifications)</div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div>Raha misy warning, tsindrio <strong>"Settings"</strong> ary ampiasao ny <strong>"Install from unknown sources"</strong></div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <div>Tsindrio <strong>"Install"</strong> ary andraso kely</div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">6</div>
+                <div>Vita! Afaka manokatra ny app ianao</div>
+            </div>
+            
+            <div class="warning">
+                <span class="warning-icon">⚠️</span>
+                <strong>Fanamarihana:</strong> Azo antoka ny app ity, kanefa mety hisy warning avy amin'ny Android satria tsy avy Google Play Store izy. Normal izany!
+            </div>
+        </div>
+        
+        <footer>
+            © 2024 Mijoro Boutique. All rights reserved.
+        </footer>
+    </div>
+    
+    <script>
+        // Ovao ity URL ity amin'ny tena URL-n'ny APK-nao
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // Ovao ity URL ity rehefa efa nanao upload ny APK
+            const apkUrl = 'https://drive.google.com/file/d/1j2Usw9ZhupyfDf7CTrcXvEgY5JpgksfI/view?usp=drivesdk';
+            
+            if (apkUrl === 'https://drive.google.com/file/d/1j2Usw9ZhupyfDf7CTrcXvEgY5JpgksfI/view?usp=drivesdk') {
+                alert('⚠️ Mila ametraka ny URL-n\'ny APK aloha!\n\nManokatra ny code HTML ary ovao ny "YOUR_APK_URL_HERE" amin\'ny tena URL-n\'ny APK-nao (Google Drive, Dropbox, sns)');
+            } else {
+                window.location.href = apkUrl;
+            }
+        });
+    </script>
+</body>
+</html>
