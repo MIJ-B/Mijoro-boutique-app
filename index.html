@@ -285,17 +285,12 @@
     </div>
     
     <script>
-        // Ovao ity URL ity amin'ny tena URL-n'ny APK-nao
         document.getElementById('downloadBtn').addEventListener('click', function(e) {
             e.preventDefault();
-            // Ovao ity URL ity rehefa efa nanao upload ny APK
-            const apkUrl = 'https://drive.google.com/file/d/1j2Usw9ZhupyfDf7CTrcXvEgY5JpgksfI/view?usp=drivesdk';
+            // URL-n'ny APK ao Google Drive
+            const apkUrl = 'https://drive.google.com/uc?export=download&id=1j2Usw9ZhupyfDf7CTrcXvEgY5JpgksfI';
             
-            if (apkUrl === 'https://drive.google.com/file/d/1j2Usw9ZhupyfDf7CTrcXvEgY5JpgksfI/view?usp=drivesdk') {
-                alert('⚠️ Mila ametraka ny URL-n\'ny APK aloha!\n\nManokatra ny code HTML ary ovao ny "YOUR_APK_URL_HERE" amin\'ny tena URL-n\'ny APK-nao (Google Drive, Dropbox, sns)');
-            } else {
-                window.location.href = apkUrl;
-            }
+            window.location.href = apkUrl;
         });
     </script>
 </body>
